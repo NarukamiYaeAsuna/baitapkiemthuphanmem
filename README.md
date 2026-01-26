@@ -390,9 +390,4 @@ Việc bổ sung test **Hộp Đen** và **Hộp Trắng** đã:
 
 ---
 
-## 🔗 Tài liệu liên quan
-
-- `PHAN_TICH_KIEM_THU.md`: Phân tích chi tiết về chất lượng kiểm thử
-- `StudentAnalyzerTest.java`: File test đầy đủ
-- `StudentAnalyzer.java`: Source code được test
 
