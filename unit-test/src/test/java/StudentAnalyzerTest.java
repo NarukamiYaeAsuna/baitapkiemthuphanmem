@@ -6,6 +6,10 @@ import java.util.List;
 
 public class StudentAnalyzerTest {
 
+    // =========================
+    // HỘP ĐEN (Black-box tests)
+    // =========================
+
     @Test
     public void testCountExcellentStudents_NormalCase_MixedValidInvalid() {
         StudentAnalyzer analyzer = new StudentAnalyzer();
@@ -35,6 +39,27 @@ public class StudentAnalyzerTest {
         StudentAnalyzer analyzer = new StudentAnalyzer();
         // Trường hợp biên: Danh sách null
         assertEquals(0, analyzer.countExcellentStudents(null));
+    }
+
+    @Test
+    public void testCountExcellentStudents_BlackBox_AllValidButNotExcellent() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        // Lớp tương đương: tất cả điểm hợp lệ nhưng không đạt giỏi (< 8.0)
+        assertEquals(0, analyzer.countExcellentStudents(Arrays.asList(0.0, 7.99, 7.0, 6.5)));
+    }
+
+    @Test
+    public void testCountExcellentStudents_BlackBox_AllExcellent() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        // Lớp tương đương: tất cả điểm hợp lệ và đều đạt giỏi (>= 8.0)
+        assertEquals(4, analyzer.countExcellentStudents(Arrays.asList(8.0, 8.1, 9.5, 10.0)));
+    }
+
+    @Test
+    public void testCountExcellentStudents_BlackBox_SingleValue() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        // Lớp tương đương: danh sách 1 phần tử (hợp lệ và đạt giỏi)
+        assertEquals(1, analyzer.countExcellentStudents(Arrays.asList(8.0)));
     }
 
     @Test
@@ -104,6 +129,13 @@ public class StudentAnalyzerTest {
     }
 
     @Test
+    public void testCalculateValidAverage_BlackBox_AllNullValues() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        // Lớp tương đương: tất cả phần tử null -> không có điểm hợp lệ -> 0.0
+        assertEquals(0.0, analyzer.calculateValidAverage(Arrays.asList(null, null, null)), 0.001);
+    }
+
+    @Test
     public void testCalculateValidAverage_EdgeCase_BoundaryValues() {
         StudentAnalyzer analyzer = new StudentAnalyzer();
         // Trường hợp biên: Danh sách chỉ chứa giá trị 0 hoặc 10
@@ -145,6 +177,36 @@ public class StudentAnalyzerTest {
         List<Double> scores = Arrays.asList(9.0, null, 8.0, 7.0);
         assertEquals(8.0, analyzer.calculateValidAverage(scores), 0.001);
         // Chỉ tính: (9.0 + 8.0 + 7.0) / 3 = 8.0
+    }
+
+    // =========================
+    // HỘP TRẮNG (White-box tests)
+    // =========================
+
+    @Test
+    public void testCountExcellentStudents_WhiteBox_CoversAllBranchesInLoop() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        // Bao phủ các nhánh trong vòng lặp:
+        // - null score
+        // - score < 0 (invalid)
+        // - score > 10 (invalid)
+        // - score hợp lệ nhưng < 8
+        // - score hợp lệ và >= 8
+        assertEquals(2, analyzer.countExcellentStudents(
+            Arrays.asList(null, -1.0, 11.0, 7.5, 8.0, 10.0)));
+    }
+
+    @Test
+    public void testCalculateValidAverage_WhiteBox_CoversInvalidAndValidAndValidCountZero() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        // validCount==0 branch (tất cả invalid hoặc null)
+        assertEquals(0.0, analyzer.calculateValidAverage(
+            Arrays.asList(null, -1.0, 11.0, Double.NaN, Double.POSITIVE_INFINITY)), 0.001);
+
+        // Các nhánh trong vòng lặp: null, invalid, valid
+        // Chỉ tính 9.0 và 7.0 => avg = 8.0
+        assertEquals(8.0, analyzer.calculateValidAverage(
+            Arrays.asList(null, -1.0, 11.0, Double.NaN, 9.0, 7.0)), 0.001);
     }
 }
 
