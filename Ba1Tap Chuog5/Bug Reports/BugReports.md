@@ -5,7 +5,7 @@
 
 | Bug ID | Tóm tắt (Summary) | Severity | Priority | Trạng thái |
 | :--- | :--- | :--- | :--- | :--- |
-| **BUG_AUTH_011** | Không thể đăng ký tài khoản khi tên chứa dấu tiếng Việt | **Major** | High | Open |
+| **BUG_AUTH_011** | Không thể đăng ký tài khoản | **Major** | High | Open |
 | **BUG_AUTH_012** | Token đăng nhập hết hạn ngay sau khi đăng nhập thành công | Major | High | Open |
 | **BUG_PRD_013** | Kết quả tìm kiếm sản phẩm trả về kết quả không liên quan | Major | Medium | Open |
 | **BUG_PRD_014** | Trang chi tiết sản phẩm bị lỗi layout khi mô tả dài > 500 ký tự | Major | Medium | Fixed |
