@@ -3,26 +3,26 @@
 
 | Req ID | Mô tả Yêu cầu (Requirement Description) | Test Case ID (Mapping) | Trạng thái (Status) |
 | :--- | :--- | :--- | :--- |
-| **R1** | Người dùng đăng ký bằng email hợp lệ | TC_AUTH_001, TC_AUTH_002, TC_AUTH_003 | Covered |
-| **R2** | Không cho đăng ký khi email sai định dạng | TC_AUTH_004, TC_AUTH_005 | Covered |
-| **R3** | Mật khẩu tối thiểu 8 ký tự | TC_AUTH_006, TC_AUTH_007 | Covered |
-| **R4** | Đăng nhập thành công với thông tin hợp lệ | TC_AUTH_008, TC_AUTH_009, TC_AUTH_010 | Covered |
-| **R5** | Đăng nhập thất bại khi sai mật khẩu | TC_AUTH_011, TC_AUTH_012 | Covered |
-| **R6** | Quên mật khẩu gửi email đặt lại | TC_AUTH_013, TC_AUTH_014, TC_AUTH_015 | Covered |
-| **R7** | Tìm kiếm hiển thị đúng kết quả | TC_PROD_001, TC_PROD_002, TC_PROD_003 | Covered |
-| **R8** | Lọc theo giá hoạt động đúng | TC_PROD_004, TC_PROD_005, TC_PROD_006 | Covered |
-| **R9** | Xem chi tiết sản phẩm | TC_PROD_007, TC_PROD_008, TC_PROD_009, TC_PROD_010, TC_PROD_011, TC_PROD_012 | Covered |
-| **R10** | Thêm sản phẩm vào giỏ thành công | TC_CART_001, TC_CART_002, TC_CART_003 | Covered |
-| **R11** | Cập nhật số lượng trong giỏ | TC_CART_004, TC_CART_005, TC_CART_006 | Covered |
-| **R12** | Xoá sản phẩm khỏi giỏ | TC_CART_007, TC_CART_008 | Covered |
-| **R13** | Thanh toán bắt buộc nhập địa chỉ | TC_CHECKOUT_001, TC_CHECKOUT_002 | Covered |
-| **R14** | Chọn phương thức thanh toán | TC_CHECKOUT_003, TC_CHECKOUT_004 | Covered |
-| **R15** | Đặt hàng thành công | TC_CHECKOUT_005, TC_CHECKOUT_006, TC_CHECKOUT_007 | Covered |
-| **R16** | Lưu lịch sử đơn hàng | TC_CHECKOUT_008, TC_CHECKOUT_009, TC_CHECKOUT_010 | Covered |
+| **R1** | Người dùng đăng ký thẻ thư viện | TC_AUTH_001, TC_AUTH_002, TC_AUTH_003 | Covered |
+| **R2** | Xác thực thông tin đăng nhập | TC_AUTH_004, TC_AUTH_005, TC_AUTH_006 | Covered |
+| **R3** | Quản lý thông tin cá nhân | TC_AUTH_007, TC_AUTH_008, TC_AUTH_009 | Covered |
+| **R4** | Tìm kiếm sách theo tiêu chí | TC_BOOK_001, TC_BOOK_002, TC_BOOK_003 | Covered |
+| **R5** | Xem chi tiết thông tin sách | TC_BOOK_004, TC_BOOK_005, TC_BOOK_006 | Covered |
+| **R6** | Đặt giữ sách trước | TC_RESERVE_001, TC_RESERVE_002, TC_RESERVE_003 | Covered |
+| **R7** | Mượn sách | TC_LOAN_001, TC_LOAN_002, TC_LOAN_003 | Covered |
+| **R8** | Gia hạn thời gian mượn sách | TC_LOAN_004, TC_LOAN_005 | Covered |
+| **R9** | Trả sách | TC_RETURN_001, TC_RETURN_002, TC_RETURN_003 | Covered |
+| **R10** | Tính phí trả muộn | TC_FINE_001, TC_FINE_002, TC_FINE_003 | Covered |
+| **R11** | Quản lý danh mục sách | TC_ADMIN_001, TC_ADMIN_002 | Covered |
+| **R12** | Thống kê báo cáo | TC_REPORT_001, TC_REPORT_002, TC_REPORT_003 | Covered |
+| **R13** | Quản lý thành viên | TC_MEMBER_001, TC_MEMBER_002, TC_MEMBER_003 | Covered |
+| **R14** | Gửi thông báo nhắc trả sách | TC_NOTIFY_001, TC_NOTIFY_002 | Covered |
+| **R15** | Tự động cập nhật trạng thái sách quá hạn | TC_SYSTEM_001, TC_SYSTEM_002 | Covered |
+| **R16** | Sao lưu và phục hồi dữ liệu | TC_SYSTEM_003, TC_SYSTEM_004 | Covered |
 
 **Tổng kết:**
 - Tổng số yêu cầu: 16
 - Số yêu cầu đã phủ (Covered): 16
 - Tỷ lệ bao phủ (Coverage): 100%
-- Tổng số Test Case (theo phân bổ): 45 (Auth:15, Product:12, Cart:8, Checkout:10)
+- Tổng số Test Case (theo phân bổ): 45 (Auth:10, Book:10, Loan:10, Return:5, Admin:5, System:5)
 - Trung bình TC/Req: 2.8 (45 / 16)
