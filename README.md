@@ -390,4 +390,55 @@ Việc bổ sung test **Hộp Đen** và **Hộp Trắng** đã:
 
 ---
 
+NHÓM : NGUYỄN VĂN GIANG
+BÀI TẬP CHƯƠNG 5
+Tài liệu Kiểm thử Hệ thống Quản lý Thư viện
+
+## Giới thiệu
+Đây là bộ tài liệu kiểm thử cho Hệ thống Quản lý Thư viện, bao gồm các tài liệu chính sau:
+
+1. **Test Plan (Kế hoạch Kiểm thử)**
+   - Mô tả chiến lược, phạm vi và cách tiếp cận kiểm thử
+   - Xác định môi trường kiểm thử, tài nguyên và lịch trình
+   - Định nghĩa các tiêu chí bắt đầu/kết thúc kiểm thử
+
+2. **Test Cases (Các trường hợp Kiểm thử)**
+   - Chi tiết các test case được tổ chức theo từng module chức năng
+   - Mỗi test case bao gồm: Tiêu đề, điều kiện tiên quyết, các bước thực hiện, kết quả mong đợi
+   - Được đánh ID rõ ràng để dễ dàng truy xuất
+
+3. **Test Report (Báo cáo Kiểm thử)**
+   - Tổng hợp kết quả thực hiện kiểm thử
+   - Phân tích các lỗi phát hiện được
+   - Đánh giá rủi ro và kiến nghị
+
+4. **Test Metrics (Chỉ số Kiểm thử)**
+   - Đo lường hiệu quả quá trình kiểm thử
+   - Theo dõi tỷ lệ pass/fail, mật độ lỗi, độ ổn định
+   - Cung cấp cái nhìn tổng quan về chất lượng sản phẩm
+
+5. **Bug Reports (Báo cáo Lỗi)**
+   - Ghi nhận chi tiết các lỗi phát hiện được
+   - Phân loại mức độ ưu tiên và mức độ nghiêm trọng
+   - Theo dõi trạng thái sửa lỗi
+
+6. **RTM (Ma trận Truy vết Yêu cầu)**
+   - Ánh xạ giữa yêu cầu và test case tương ứng
+   - Đảm bảo mọi yêu cầu đều được kiểm thử
+   - Theo dõi độ phủ kiểm thử
+
+## Cách sử dụng
+1. Bắt đầu bằng việc đọc **Test Plan** để hiểu rõ phạm vi và cách tiếp cận kiểm thử
+2. Thực thi các **Test Case** theo đúng kế hoạch
+3. Ghi nhận kết quả vào **Test Report**
+4. Cập nhật **Bug Reports** khi phát hiện lỗi
+5. Sử dụng **RTM** để đảm bảo tất cả yêu cầu đã được kiểm thử đầy đủ
+6. Phân tích **Test Metrics** để đánh giá tiến độ và chất lượng
+
+## Quy ước đặt tên
+- **Test Case ID**: Có dạng `TC_[MODULE]_[STT]` (VD: TC_AUTH_001)
+- **Bug ID**: Có dạng `BUG_[MODULE]_[STT]` (VD: BUG_LOAN_001)
+- **Requirement ID**: Có dạng `R[STT]` (VD: R1, R2, ...)
+
+
 
