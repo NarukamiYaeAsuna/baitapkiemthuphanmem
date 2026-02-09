@@ -1,59 +1,11 @@
 # BÁO CÁO KIỂM THỬ (TEST REPORT)
-**Dự án:** Hệ thống Quản lý Thư viện (Library Management System)
-**Ngày báo cáo:** 15/06/2023
-**Người báo cáo:** QA Team
+**Dự án:** Website Bán hàng Trực tuyến (E-commerce)
 
-## 1. Tổng quan (Summary)
-- **Thời gian thực hiện:** 01/06/2023 - 15/06/2023
-- **Mục tiêu:** Đánh giá chất lượng toàn diện hệ thống Quản lý Thư viện trước khi triển khai chính thức.
-- **Phạm vi kiểm thử:** Module Xác thực, Quản lý sách, Mượn/Trả sách, và Quản trị.
-
-## 2. Kết quả kiểm thử (Test Results)
-| Module | Tổng số TC | Passed | Failed | Blocked | Tỷ lệ Pass |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| **Xác thực (Auth)** | 10 | 9 | 1 | 0 | 90% |
-| **Quản lý sách** | 12 | 10 | 2 | 0 | 83.3% |
-| **Mượn/Trả sách** | 15 | 10 | 4 | 1 | 66.7% |
-| **Quản trị** | 8 | 8 | 0 | 0 | 100% |
-| **Tổng cộng** | **45** | **37** | **7** | **1** | **82.2%** |
-
-## 3. Tổng quan về lỗi (Defect Summary)
-- **Tổng số lỗi phát hiện:** 10
-- **Phân bố mức độ nghiêm trọng:**
-  - Critical: 1 (10%)
-  - Major: 4 (40%)
-  - Minor: 5 (50%)
-- **Tình trạng lỗi:**
-  - Đã sửa: 6
-  - Đang chờ sửa: 4
-  - Đã đóng: 6
-  - Mở lại: 1
-
-## 4. Phân tích chi tiết từng module
-
-### 4.1 Module Xác thực (Authentication)
-- **Tỷ lệ pass:** 90%
-- **Vấn đề chính:** Lỗi xác thực khi tên người dùng chứa ký tự đặc biệt.
-- **Đánh giá:** Ổn định, chỉ còn một số vấn đề nhỏ cần khắc phục.
-
-### 4.2 Module Quản lý sách (Book Management)
-- **Tỷ lệ pass:** 83.3%
-- **Vấn đề chính:** 
-  - Lỗi hiển thị ảnh bìa sách trên một số trình duyệt.
-  - Tìm kiếm sách chưa phân biệt dấu tiếng Việt.
-- **Đánh giá:** Cần cải thiện khả năng tìm kiếm và hiển thị đa nền tảng.
-
-### 4.3 Module Mượn/Trả sách (Loan/Return)
-- **Tỷ lệ pass:** 66.7%
-- **Vấn đề chính:**
-  - Lỗi nghiêm trọng: Hệ thống không tự động cập nhật trạng thái sách quá hạn (BUG_LOAN_017).
-  - Tính toán phí trả muộn chưa chính xác trong một số trường hợp.
-- **Đánh giá:** Cần ưu tiên sửa các lỗi nghiêm trọng trước khi triển khai.
-
-### 4.4 Module Quản trị (Administration)
-- **Tỷ lệ pass:** 100%
-- **Vấn đề chính:** Không có lỗi nghiêm trọng.
-- **Đánh giá:** Hoạt động ổn định, đáp ứng đầy đủ yêu cầu.
+## 1. Tổng quan (Overview)
+- **Ngày bắt đầu:** 01/02/2024
+- **Ngày kết thúc:** 09/02/2024
+- **Mục tiêu kiểm thử:** Đánh giá chất lượng hệ thống trước khi triển khai
+- **Phạm vi kiểm thử:** Module Xác thực, Sản phẩm & Giỏ hàng, Thanh toán
 
 ## 5. Đánh giá rủi ro (Risk Assessment)
 - **Rủi ro cao:** 

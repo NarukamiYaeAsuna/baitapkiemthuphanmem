@@ -1,26 +1,37 @@
 # CHỈ SỐ KIỂM THỬ (TEST METRICS)
+**Dự án:** Website Bán hàng Trực tuyến (E-commerce)
 
-## 1. Tỷ lệ thực thi (Test Execution Rate)
-Đo lường tiến độ thực hiện test.
-- Công thức: `(Số TC đã chạy / Tổng số TC) * 100%`
-- Tính toán: `(45 / 45) * 100%`
-- **Kết quả: 100%** (Đã hoàn thành chạy toàn bộ test)
+## 1. Tổng quan (Overview)
+- **Tổng số Test Case:** 36
+- **Đã thực thi (Executed):** 36 (100%)
+- **Passed:** 30 (83.3%)
+- **Failed:** 6 (16.7%)
+- **Chưa thực thi (Not Run):** 0 (0%)
 
-## 2. Tỷ lệ Pass/Fail (Pass/Fail Rate)
-- Pass Rate: `(35 / 45) * 100%` = **77.8%**
-- Fail Rate: `(10 / 45) * 100%` = **22.2%**
+## 2. Chi tiết lỗi (Defect Breakdown)
+### 2.1 Theo mức độ nghiêm trọng (By Severity)
+- **Critical:** 1 (16.7%)
+- **Major:** 4 (66.6%)
+- **Minor:** 1 (16.7%)
 
-## 3. Mật độ lỗi theo Module (Defect Density)
-Đo lường số lượng bug tìm thấy trên mỗi module.
-
+### 2.2 Theo module (By Module)
 | Module | Số Bug | Tỷ trọng |
 | :--- | :--- | :--- |
-| Xác thực (Auth) | 2 | 20% |
-| Quản lý sách | 3 | 30% |
-| Mượn/Trả sách | 5 | 50% |
-| Quản trị | 0 | 0% |
+| Xác thực (Auth) | 2 | 33.3% |
+| Sản phẩm | 2 | 33.3% |
+| Giỏ hàng | 1 | 16.7% |
+| Thanh toán | 1 | 16.7% |
 
-=> **Nhận xét:** Module Mượn/Trả sách đang chứa nhiều lỗi nhất, cần tập trung fix và re-test kỹ chức năng này.
+## 3. Chất lượng mã nguồn (Code Quality)
+- **Độ phủ code (Code Coverage):** 75%
+  - Dòng lệnh: 73%
+  - Nhánh: 65%
+  - Hàm: 80%
+- **Số lỗi phát hiện:** 10
+  - Lỗi cú pháp: 2
+  - Cảnh báo bảo mật: 3
+  - Vấn đề hiệu năng: 2
+  - Lỗi logic: 3
 
 ## 4. Phân bố mức độ nghiêm trọng (Severity Distribution)
 Đánh giá mức độ ảnh hưởng của lỗi.

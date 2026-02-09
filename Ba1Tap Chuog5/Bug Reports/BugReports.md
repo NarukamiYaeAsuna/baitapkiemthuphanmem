@@ -7,14 +7,14 @@
 | :--- | :--- | :--- | :--- | :--- |
 | **BUG_AUTH_011** | Không thể đăng ký tài khoản khi tên chứa dấu tiếng Việt | **Major** | High | Open |
 | **BUG_AUTH_012** | Token đăng nhập hết hạn ngay sau khi đăng nhập thành công | Major | High | Open |
-| **BUG_BOOK_013** | Kết quả tìm kiếm sách trả về kết quả không liên quan | Major | Medium | Open |
-| **BUG_BOOK_014** | Trang chi tiết sách bị lỗi layout khi mô tả dài > 300 ký tự | Major | Medium | Fixed |
-| **BUG_LOAN_015** | Phí trả muộn tính sai khi sách trả quá hạn | Major | High | Open |
-| **BUG_LOAN_016** | Số lượng sách mượn tối đa không giới hạn (nên có giới hạn) | Major | Low | Open |
-| **BUG_LOAN_017** | Hệ thống không tự động cập nhật trạng thái sách khi quá hạn | Critical | High | Open |
+| **BUG_PRD_013** | Kết quả tìm kiếm sản phẩm trả về kết quả không liên quan | Major | Medium | Open |
+| **BUG_PRD_014** | Trang chi tiết sản phẩm bị lỗi layout khi mô tả dài > 500 ký tự | Major | Medium | Fixed |
+| **BUG_CART_015** | Giỏ hàng không cập nhật số lượng khi thay đổi từ trang chi tiết | Major | High | Open |
+| **BUG_CART_016** | Không giới hạn số lượng sản phẩm trong giỏ hàng | Major | Low | Open |
+| **BUG_CHK_017** | Lỗi xử lý thanh toán khi địa chỉ quá dài | Critical | High | Open |
 | **BUG_UI_018** | Modal thông báo không có nút đóng (X) trên màn hình nhỏ | Minor | Low | Fixed |
-| **BUG_UI_019** | Tooltip mô tả sách bị che bởi footer trên mobile | Minor | Low | Open |
-| **BUG_BOOK_020** | Ảnh bìa sách bị mất tỉ lệ (stretched) trên Safari | Minor | Low | Open |
+| **BUG_UI_019** | Tooltip mô tả sản phẩm bị che bởi footer trên mobile | Minor | Low | Open |
+| **BUG_PRD_020** | Ảnh sản phẩm bị mất tỉ lệ (stretched) trên Safari | Minor | Low | Open |
 
 ---
 

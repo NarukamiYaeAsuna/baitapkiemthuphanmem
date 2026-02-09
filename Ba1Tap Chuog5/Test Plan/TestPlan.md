@@ -1,22 +1,36 @@
 # KẾ HOẠCH KIỂM THỬ (TEST PLAN)
-**Dự án:** Hệ thống Quản lý Thư viện (Library Management System)
+**Dự án:** Website Bán hàng Trực tuyến (E-commerce)
 
 ## 1. Giới thiệu (Introduction)
-Tài liệu này mô tả kế hoạch kiểm thử cho Hệ thống Quản lý Thư viện. Mục đích là xác định phạm vi, phương pháp, nguồn lực và lịch trình cho các hoạt động kiểm thử nhằm đảm bảo chất lượng phần mềm trước khi triển khai.
+Tài liệu này mô tả kế hoạch kiểm thử cho Website Bán hàng Trực tuyến. Mục đích là xác định phạm vi, phương pháp, nguồn lực và lịch trình cho các hoạt động kiểm thử nhằm đảm bảo chất lượng phần mềm trước khi triển khai.
 
 ## 2. Phạm vi kiểm thử (Scope)
 ### 2.1 Trong phạm vi (In-scope)
 Kiểm thử chức năng (Functional Testing) và giao diện (UI Testing) cho các module sau:
-- **Module 1 - Xác thực (Authentication):** Đăng ký thẻ, Đăng nhập, Đổi mật khẩu, Đăng xuất.
-- **Module 2 - Quản lý sách (Book Management):** Tìm kiếm, Xem chi tiết, Đặt giữ, Quản lý danh mục.
-- **Module 3 - Mượn/Trả sách (Loan/Return):** Mượn sách, Gia hạn, Trả sách, Tính phí trả muộn.
-- **Module 4 - Quản trị (Administration):** Quản lý thành viên, Báo cáo thống kê, Sao lưu dữ liệu.
+- **Module 1 - Xác thực (Authentication):** 
+  - Đăng ký tài khoản
+  - Đăng nhập/Đăng xuất
+  - Quên mật khẩu
+  - Đổi mật khẩu
+
+- **Module 2 - Sản phẩm & Giỏ hàng (Product & Cart):**
+  - Tìm kiếm sản phẩm
+  - Lọc theo giá/danh mục
+  - Xem chi tiết sản phẩm
+  - Thêm/Xóa sản phẩm vào giỏ
+  - Cập nhật số lượng sản phẩm
+
+- **Module 3 - Thanh toán (Checkout):**
+  - Nhập địa chỉ giao hàng
+  - Chọn phương thức thanh toán
+  - Xác nhận đơn hàng
+  - Xem lịch sử đơn hàng
 
 ### 2.2 Ngoài phạm vi (Out-of-scope)
-- Kiểm thử hiệu năng (Performance Testing) với số lượng người dùng lớn.
-- Kiểm thử tự động (Automation Testing).
-- Kiểm thử bảo mật chuyên sâu (Security Penetration Testing).
-- Tích hợp với hệ thống thanh toán trực tuyến (nếu có).
+- Kiểm thử hiệu năng (Performance Testing) với số lượng người dùng lớn
+- Kiểm thử tự động (Automation Testing)
+- Kiểm thử bảo mật chuyên sâu (Security Penetration Testing)
+- Tích hợp thực tế với cổng thanh toán (chỉ kiểm thử với cổng thanh toán giả lập)
 
 ## 3. Phương pháp kiểm thử (Test Approach)
 - **Kiểm thử chức năng (Functional testing):** Xác minh các chức năng hoạt động đúng theo yêu cầu.

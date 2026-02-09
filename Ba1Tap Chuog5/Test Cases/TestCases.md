@@ -1,14 +1,15 @@
 # CA KIỂM THỬ (TEST CASES)
 
 ## Tổng quan
-- **Tổng số:** 45 Test Cases
-- **Phân bổ:** Xác thực (10), Sách (10), Mượn/Trả (15), Quản trị (10)
+- **Tổng số:** 36 Test Cases
+- **Phân bổ:** Xác thực (12), Sản phẩm (6), Giỏ hàng (6), Thanh toán (6), Đơn hàng (6)
 
-## Module 1: Xác thực (Authentication) - 10 Cases
+## Module 1: Xác thực (Authentication) - 12 Cases
 
 | TC ID | Tiêu đề (Title) | Điều kiện trước (Precondition) | Các bước (Steps) | Kết quả mong đợi (Expected Result) | Độ ưu tiên | Loại Test |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| TC_AUTH_001 | Đăng ký thẻ thư viện thành công | Chưa có tài khoản | 1. Vào trang Đăng ký <br> 2. Điền đủ thông tin <br> 3. Bấm Đăng ký | Tạo thẻ thành công, chuyển về trang chủ | High | Positive |
+| TC_AUTH_001 | Đăng ký tài khoản thành công với email hợp lệ | Chưa có tài khoản | 1. Vào trang Đăng ký <br> 2. Nhập email hợp lệ <br> 3. Nhập mật khẩu ≥ 8 ký tự <br> 4. Xác nhận mật khẩu <br> 5. Bấm Đăng ký | Tạo tài khoản thành công, gửi email xác nhận | High | Positive |
+| TC_AUTH_002 | Đăng ký thất bại khi email đã tồn tại | Đã có tài khoản với email test@example.com | 1. Vào trang Đăng ký <br> 2. Nhập email test@example.com <br> 3. Nhập mật khẩu hợp lệ <br> 4. Bấm Đăng ký | Hiển thị thông báo "Email đã được sử dụng" | High | Negative |
 | TC_AUTH_002 | Đăng ký thất bại khi thiếu thông tin bắt buộc | - | 1. Để trống các trường bắt buộc <br> 2. Bấm Đăng ký | Báo lỗi yêu cầu nhập đủ thông tin | High | Negative |
 | TC_AUTH_003 | Đăng ký thất bại khi email đã tồn tại | Email đã đăng ký | 1. Nhập email đã có <br> 2. Bấm Đăng ký | Báo lỗi email đã được sử dụng | Medium | Negative |
 | TC_AUTH_004 | Đăng nhập thành công với thông tin đúng | Đã có tài khoản | 1. Nhập email, mật khẩu đúng <br> 2. Bấm Đăng nhập | Đăng nhập thành công, vào trang chủ | High | Positive |
@@ -17,7 +18,53 @@
 | TC_AUTH_007 | Đổi mật khẩu thành công | Đã đăng nhập | 1. Vào trang đổi mật khẩu <br> 2. Nhập mật khẩu cũ và mới <br> 3. Xác nhận | Đổi mật khẩu thành công | Medium | Positive |
 | TC_AUTH_008 | Đổi mật khẩu thất bại khi nhập sai mật khẩu cũ | Đã đăng nhập | 1. Nhập sai mật khẩu cũ <br> 2. Bấm Xác nhận | Báo lỗi mật khẩu cũ không đúng | Medium | Negative |
 | TC_AUTH_009 | Đăng xuất hệ thống | Đang đăng nhập | 1. Bấm Đăng xuất | Đăng xuất thành công, về trang đăng nhập | High | Positive |
-| TC_AUTH_010 | Truy cập trang quản trị không có quyền | Tài khoản thường | 1. Truy cập URL quản trị | Báo lỗi không có quyền truy cập | High | Security |
+| TC_AUTH_010 | Quên mật khẩu - Gửi email đặt lại | Tài khoản tồn tại | 1. Vào trang Quên mật khẩu <br> 2. Nhập email đã đăng ký <br> 3. Bấm Gửi yêu cầu | Nhận được email hướng dẫn đặt lại mật khẩu | High | Positive |
+| TC_AUTH_011 | Quên mật khẩu - Email không tồn tại | - | 1. Vào trang Quên mật khẩu <br> 2. Nhập email chưa đăng ký <br> 3. Bấm Gửi yêu cầu | Hiển thị thông báo "Email chưa được đăng ký" | Medium | Negative |
+| TC_AUTH_012 | Đổi mật khẩu thành công | Đã đăng nhập | 1. Vào trang Cài đặt tài khoản <br> 2. Chọn Đổi mật khẩu <br> 3. Nhập mật khẩu cũ và mật khẩu mới đủ mạnh | Thông báo đổi mật khẩu thành công | Medium | Positive |
+
+## Module 2: Sản phẩm (Product) - 6 Cases
+
+| TC ID | Tiêu đề (Title) | Điều kiện trước (Precondition) | Các bước (Steps) | Kết quả mong đợi (Expected Result) | Độ ưu tiên | Loại Test |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| TC_PRD_001 | Tìm kiếm sản phẩm theo tên | - | 1. Nhập tên sản phẩm vào ô tìm kiếm <br> 2. Nhấn Enter | Hiển thị danh sách sản phẩm phù hợp | High | Positive |
+| TC_PRD_002 | Tìm kiếm không có kết quả | - | 1. Nhập từ khóa không tồn tại | Hiển thị thông báo "Không tìm thấy sản phẩm" | Medium | Negative |
+| TC_PRD_003 | Lọc sản phẩm theo khoảng giá | - | 1. Chọn mức giá từ 500.000đ - 2.000.000đ <br> 2. Bấm Áp dụng | Chỉ hiển thị sản phẩm trong khoảng giá đã chọn | High | Positive |
+| TC_PRD_004 | Lọc sản phẩm theo danh mục | - | 1. Chọn danh mục "Điện thoại" <br> 2. Bấm Áp dụng | Chỉ hiển thị sản phẩm thuộc danh mục đã chọn | High | Positive |
+| TC_PRD_005 | Xem chi tiết sản phẩm | - | 1. Click vào tên sản phẩm bất kỳ | Hiển thị đầy đủ thông tin chi tiết sản phẩm | High | Positive |
+| TC_PRD_006 | Xem đánh giá sản phẩm | - | 1. Vào trang chi tiết sản phẩm <br> 2. Kéo xuống phần đánh giá | Hiển thị danh sách đánh giá của khách hàng | Medium | Positive |
+
+## Module 3: Giỏ hàng (Cart) - 6 Cases
+
+| TC ID | Tiêu đề (Title) | Điều kiện trước (Precondition) | Các bước (Steps) | Kết quả mong đợi (Expected Result) | Độ ưu tiên | Loại Test |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| TC_CART_001 | Thêm sản phẩm vào giỏ hàng | Đã chọn sản phẩm | 1. Bấm "Thêm vào giỏ hàng" | Sản phẩm được thêm vào giỏ, số lượng trong giỏ tăng lên | High | Positive |
+| TC_CART_002 | Xóa sản phẩm khỏi giỏ hàng | Có sản phẩm trong giỏ | 1. Vào giỏ hàng <br> 2. Bấm Xóa sản phẩm | Sản phẩm bị xóa khỏi giỏ, tổng tiền được cập nhật | High | Positive |
+| TC_CART_003 | Cập nhật số lượng sản phẩm | Có sản phẩm trong giỏ | 1. Vào giỏ hàng <br> 2. Thay đổi số lượng sản phẩm <br> 3. Bấm Cập nhật | Số lượng và tổng tiền được cập nhật | High | Positive |
+| TC_CART_004 | Nhập số lượng không hợp lệ | Có sản phẩm trong giỏ | 1. Vào giỏ hàng <br> 2. Nhập số lượng = 0 hoặc chữ | Hiển thị thông báo lỗi, không cho cập nhật | Medium | Negative |
+| TC_CART_005 | Kiểm tra tổng tiền | Nhiều sản phẩm trong giỏ | 1. Vào giỏ hàng | Tổng tiền được tính đúng theo giá và số lượng từng sản phẩm | High | Positive |
+| TC_CART_006 | Tiếp tục mua hàng | Giỏ hàng không rỗng | 1. Vào giỏ hàng <br> 2. Bấm "Tiếp tục mua hàng" | Chuyển về trang danh sách sản phẩm | Low | Positive |
+
+## Module 4: Thanh toán (Checkout) - 6 Cases
+
+| TC ID | Tiêu đề (Title) | Điều kiện trước (Precondition) | Các bước (Steps) | Kết quả mong đợi (Expected Result) | Độ ưu tiên | Loại Test |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| TC_CHK_001 | Nhập địa chỉ giao hàng | Đã đăng nhập, có sản phẩm trong giỏ | 1. Vào trang thanh toán <br> 2. Nhập đầy đủ thông tin địa chỉ <br> 3. Bấm Tiếp tục | Chuyển sang bước chọn phương thức thanh toán | High | Positive |
+| TC_CHK_002 | Bỏ trống trường bắt buộc | Đã đăng nhập, có sản phẩm trong giỏ | 1. Để trống trường bắt buộc <br> 2. Bấm Tiếp tục | Hiển thị thông báo yêu cầu nhập đủ thông tin | High | Negative |
+| TC_CHK_003 | Chọn phương thức thanh toán COD | Đã nhập địa chỉ | 1. Chọn "Thanh toán khi nhận hàng" <br> 2. Bấm Đặt hàng | Hiển thị trang xác nhận đơn hàng thành công | High | Positive |
+| TC_CHK_004 | Chọn thanh toán bằng thẻ | Đã nhập địa chỉ | 1. Chọn "Thanh toán bằng thẻ" <br> 2. Nhập thông tin thẻ giả lập <br> 3. Bấm Thanh toán | Chuyển hướng đến cổng thanh toán giả lập | High | Positive |
+| TC_CHK_005 | Hủy đơn hàng | Đã đặt hàng thành công | 1. Vào trang đơn hàng <br> 2. Chọn đơn hàng cần hủy <br> 3. Bấm Hủy đơn hàng | Trạng thái đơn hàng chuyển sang "Đã hủy" | Medium | Positive |
+| TC_CHK_006 | Kiểm tra email xác nhận | Đã đặt hàng thành công | 1. Kiểm tra hộp thư email | Nhận được email xác nhận đơn hàng với đầy đủ thông tin | Medium | Positive |
+
+## Module 5: Quản lý đơn hàng (Order) - 6 Cases
+
+| TC ID | Tiêu đề (Title) | Điều kiện trước (Precondition) | Các bước (Steps) | Kết quả mong đợi (Expected Result) | Độ ưu tiên | Loại Test |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| TC_ORD_001 | Xem lịch sử đơn hàng | Đã đăng nhập, có đơn hàng | 1. Vào mục Đơn hàng của tôi | Hiển thị danh sách các đơn hàng đã đặt | High | Positive |
+| TC_ORD_002 | Xem chi tiết đơn hàng | Có đơn hàng đã đặt | 1. Chọn một đơn hàng bất kỳ | Hiển thị đầy đủ thông tin đơn hàng | High | Positive |
+| TC_ORD_003 | Theo dõi trạng thái đơn hàng | Có đơn hàng đang giao | 1. Vào chi tiết đơn hàng | Hiển thị trạng thái cập nhật mới nhất | Medium | Positive |
+| TC_ORD_004 | In hóa đơn | Có đơn hàng đã đặt | 1. Vào chi tiết đơn hàng <br> 2. Bấm In hóa đơn | Mở cửa sổ in với đầy đủ thông tin hóa đơn | Low | Positive |
+| TC_ORD_005 | Đánh giá sản phẩm sau khi mua | Đã nhận được hàng | 1. Vào chi tiết đơn hàng <br> 2. Chọn Đánh giá <br> 3. Nhập nội dung và chọn sao <br> 4. Bấm Gửi | Đánh giá được lưu và hiển thị dưới sản phẩm | Medium | Positive |
+| TC_ORD_006 | Yêu cầu đổi trả hàng | Trong thời hạn đổi trả | 1. Vào chi tiết đơn hàng <br> 2. Chọn Yêu cầu đổi trả <br> 3. Điền lý do và gửi | Nhận được email xác nhận yêu cầu đổi trả | Medium | Positive |
 
 ## Module 2: Quản lý sách (Book Management) - 10 Cases
 
