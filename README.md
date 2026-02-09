@@ -392,10 +392,10 @@ Việc bổ sung test **Hộp Đen** và **Hộp Trắng** đã:
 
 NHÓM : NGUYỄN VĂN GIANG
 BÀI TẬP CHƯƠNG 5
-Tài liệu Kiểm thử Hệ thống Quản lý Thư viện
+# Tài liệu Kiểm thử Website Bán hàng Trực tuyến
 
 ## Giới thiệu
-Đây là bộ tài liệu kiểm thử cho Hệ thống Quản lý Thư viện, bao gồm các tài liệu chính sau:
+Đây là bộ tài liệu kiểm thử cho Website Bán hàng Trực tuyến, bao gồm các tài liệu chính sau:
 
 1. **Test Plan (Kế hoạch Kiểm thử)**
    - Mô tả chiến lược, phạm vi và cách tiếp cận kiểm thử
@@ -403,14 +403,14 @@ Tài liệu Kiểm thử Hệ thống Quản lý Thư viện
    - Định nghĩa các tiêu chí bắt đầu/kết thúc kiểm thử
 
 2. **Test Cases (Các trường hợp Kiểm thử)**
-   - Chi tiết các test case được tổ chức theo từng module chức năng
+   - 36 test case được tổ chức theo 5 module chính
    - Mỗi test case bao gồm: Tiêu đề, điều kiện tiên quyết, các bước thực hiện, kết quả mong đợi
    - Được đánh ID rõ ràng để dễ dàng truy xuất
 
 3. **Test Report (Báo cáo Kiểm thử)**
    - Tổng hợp kết quả thực hiện kiểm thử
    - Phân tích các lỗi phát hiện được
-   - Đánh giá rủi ro và kiến nghị
+   - Đánh giá rủi ro và đưa ra kiến nghị
 
 4. **Test Metrics (Chỉ số Kiểm thử)**
    - Đo lường hiệu quả quá trình kiểm thử
@@ -427,18 +427,46 @@ Tài liệu Kiểm thử Hệ thống Quản lý Thư viện
    - Đảm bảo mọi yêu cầu đều được kiểm thử
    - Theo dõi độ phủ kiểm thử
 
-## Cách sử dụng
-1. Bắt đầu bằng việc đọc **Test Plan** để hiểu rõ phạm vi và cách tiếp cận kiểm thử
-2. Thực thi các **Test Case** theo đúng kế hoạch
+## Cách sử dụng tài liệu
+
+### 1. Đối với Tester
+1. Bắt đầu với **Test Plan** để hiểu phạm vi kiểm thử
+2. Thực thi các **Test Case** theo kế hoạch
 3. Ghi nhận kết quả vào **Test Report**
-4. Cập nhật **Bug Reports** khi phát hiện lỗi
-5. Sử dụng **RTM** để đảm bảo tất cả yêu cầu đã được kiểm thử đầy đủ
-6. Phân tích **Test Metrics** để đánh giá tiến độ và chất lượng
+4. Báo cáo lỗi vào **Bug Reports** nếu phát hiện
+5. Cập nhật **RTM** để đảm bảo độ phủ yêu cầu
+6. Phân tích **Test Metrics** để đánh giá tiến độ
+
+### 2. Đối với Developer
+1. Kiểm tra **Bug Reports** để biết các lỗi cần sửa
+2. Tham khảo **Test Cases** để hiểu kịch bản kiểm thử
+3. Cập nhật trạng thái lỗi sau khi sửa
+
+### 3. Đối với Quản lý dự án
+1. Xem **Test Report** để đánh giá chất lượng tổng thể
+2. Phân tích **Test Metrics** để ra quyết định phát hành
+3. Theo dõi tiến độ thông qua **RTM**
+
+## Cấu trúc thư mục
+```
+.
+├── Bug Reports/         # Báo cáo lỗi chi tiết
+├── RTM/                # Ma trận Truy vết Yêu cầu
+├── Test Cases/         # Các trường hợp kiểm thử
+├── Test Metrics/       # Chỉ số và số liệu kiểm thử
+├── Test Plan/          # Kế hoạch kiểm thử
+└── Test Report/        # Báo cáo tổng kết kiểm thử
+```
 
 ## Quy ước đặt tên
-- **Test Case ID**: Có dạng `TC_[MODULE]_[STT]` (VD: TC_AUTH_001)
-- **Bug ID**: Có dạng `BUG_[MODULE]_[STT]` (VD: BUG_LOAN_001)
-- **Requirement ID**: Có dạng `R[STT]` (VD: R1, R2, ...)
+- **Test Case ID:** `TC_[MODULE]_[STT]` (VD: TC_AUTH_001)
+- **Bug ID:** `BUG_[MODULE]_[STT]` (VD: BUG_CART_001)
+- **Requirement ID:** `R[STT]` (VD: R1, R2, ...)
+
+## Tần suất cập nhật
+- **Hàng ngày:** Cập nhật Bug Reports
+- **Cuối mỗi sprint:** Cập nhật Test Cases và Test Report
+- **Trước mỗi bản phát hành:** Cập nhật toàn bộ tài liệu
 
 
 
